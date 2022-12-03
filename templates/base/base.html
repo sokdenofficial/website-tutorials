@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}Skyfeed{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="" href="{% static "css/index.css" %}">
+    <link rel="icon" type="image/png" href="{% static "images/ic_site.png" %}">
+  </head>
+  <body>
+
+
+    <nav class="navbar">
+      <!-- LOGO -->
+      <div class="logo">Skyfeed</div>
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENU -->
+        <div class="menu">
+          <li><a href="#"></a>Home</li>
+          <li><a href="#"></a>About</li>
+          <li class="services"><a href="#">Services</a>
+          <ul class="dropdown">
+            <li><a href="">Dropdown 1</a></li>
+            <li><a href="">Dropdown 2</a></li>
+            <li><a href="">Dropdown 3</a></li>
+            <li><a href="">Dropdown 4</a></li>
+            <li><a href="">Dropdown 5</a></li>
+          </ul>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </div>
+      </ul>
+    </nav>
+
+
+    <div class="main">
+      {% block content %}
+        <!-- Our source code will display here  -->
+      {% endblock %}
+    </div>
+  
+  </body>
+</html>
